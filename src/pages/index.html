@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+
+      <title>DFC Online</title>
+
+    {% endblock title %}
+
+    {% block styles %}
+
+      <link type="text/css" rel=stylesheet href="/styles/index.css"/>
+
+    {% endblock styles %}
+
+  </head>
+
+  {% block content %}
+
+  <body>
+
+    <header>
+
+    <div class="Online-prices">
+
+      <div class="stocks-block">
+
+        <h3>Consulta de preços</h3>
+
+        <select id="stocks">
+
+          <option *disabled* *selected*></option>
+
+          <option>TAEE11</option>
+
+          <option>BBASE3</option>
+
+          <option>ENBR3</option>
+
+        </select><!--Online-prices-->
+
+      </div><!--stocks-block-->
+
+    <div class="price-result">
+
+      <input disabled placeholder="Price" id="price"/>
+
+    </div><!--price-result-->
+
+    
+
+    </header><!--header-->
+
+    <div class="content">
+
+      <form id="table">
+
+        <label for="debt">Informe a dívida da empresa:</label><br>
+
+        <input type="number" id="debt" name="debt"/><br>
+
+        <label for="stocks-quantity">Informe o número de ações da empresa:</label><br>
+
+        <input type="number" id="stocks-quantity" name="stocks-quantity"/><br>
+
+        <div class="metricas"></div><!--metricas-->
+
+        <div class="Receita-op-liq">
+
+          <label for="R-OP-LIQ">Informe a Receita operacional líquida da empresa:</label>
+
+          <input type="number" id="R-OP-LIQ" name="R-OP-LIQ"/><br>
+
+          <input type="number" id="R-OP-LIQ-1" name="R-OP-LIQ-"/><br>
+
+          <input type="number" id="R-OP-LIQ-2" name="R-OP-LIQ-2"/><br>
+
+          <input type="number" id="R-OP-LIQ-3" name="R-OP-LIQ-3"/><br>
+
+          <input type="number" id="R-OP-LIQ-4" name="R-OP-LIQ-4"/><br>
+
+        </div><!--Receita-op-liq-->
+
+        <div class="nopat"></div><!--nopat-->
+
+        <div class="capex"></div><!--capex-->
+
+        <div class="var-ncg"></div><!--var-ncg-->
+
+        <div class="depreciation"></div><!--depreciation-->
+
+        <div class="fc-firma"></div><!--fc-firma-->
+
+        <div class="valor-presente-dos-fluxos"></div><!--valor-presente-dos-fluxos-->
+
+        <div class="valor-da-firma"></div><!--valor-da-firma-->
+
+        <div class="valor-do-acionista"></div><!--valor-do-acionista-->
+
+        <div class="valor-de-mercado"></div><!--valor-de-mercado-->
+
+        <div class="stock-price"></div><!--stock-price-->
+
+        <div class="stock-true-price"></div><!--stock-true-price-->
+
+        <div class="upside"></div><!--upside-->
+
+        </form><!--table-->
+
+      </div><!--content-->
+
+    <footer></footer><!--footer-->
+
+  </body>
+
+{% endblock content %}
+
+{% block scripts %}
+
+<script src="/scripts/index.js"></script>
+
+{% endblock scripts %}
+
+</html>

@@ -1,0 +1,31 @@
+* {
+
+  margin: 0;
+  
+  padding: 0;
+  
+  box-sizing: border-box;
+  
+}
+  
+header .Online-prices{
+  
+  background-color:rgb(238, 238, 240);
+  
+  display:flex;
+  
+}
+  
+.stocks-block select{
+  
+  margin-left:10%;
+  
+  }
+  
+.price-result{
+  
+  margin-top:1.5%;
+  
+  margin-left:4%;
+  
+  }
