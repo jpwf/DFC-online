@@ -29,3 +29,7 @@ header .Online-prices{
   margin-left:4%;
   
   }
+
+#modal.hide{
+    display:none
+  }

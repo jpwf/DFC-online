@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+{% set pageId = "page-home" %}
+
 <html lang="pt-br">
 
   <head>
@@ -16,8 +18,8 @@
 
     {% block styles %}
 
-      <link type="text/css" rel=stylesheet href="/styles/index.css"/>
-
+      <link type="text/css" rel="stylesheet" href="/styles/index.css"/>
+      <link type="text/css" rel="stylesheet" href="/styles/modal.css"/>
     {% endblock styles %}
 
   </head>
@@ -54,65 +56,37 @@
 
     </div><!--price-result-->
 
-    
-
     </header><!--header-->
 
     <div class="content">
-
-      <form id="table">
-
+      
+        <div class="metricas"></div><!--metricas-->
         <label for="debt">Informe a dívida da empresa:</label><br>
-
-        <input type="number" id="debt" name="debt"/><br>
+        <input type="number" required="required" id="debt" name="debt"/><br>
 
         <label for="stocks-quantity">Informe o número de ações da empresa:</label><br>
-
-        <input type="number" id="stocks-quantity" name="stocks-quantity"/><br>
-
-        <div class="metricas"></div><!--metricas-->
-
-        <div class="Receita-op-liq">
-
+        <input type="number" required="required" id="stocks-quantity" name="stocks-quantity"/><br>
+        <fieldset>
           <label for="R-OP-LIQ">Informe a Receita operacional líquida da empresa:</label>
+          <input type="number" required="required" id="R-OP-LIQ"/><br>
 
-          <input type="number" id="R-OP-LIQ" name="R-OP-LIQ"/><br>
+          <label for="NOPAT">Informe o NOPAT da empresa:</label>
+          <input type="number" required="required" id="NOPAT"/><br>
 
-          <input type="number" id="R-OP-LIQ-1" name="R-OP-LIQ-"/><br>
+          <label for="CAPEX">Informe o CAPEX da empresa:</label>
+          <input type="number" required="required" id="CAPEX"/><br>
 
-          <input type="number" id="R-OP-LIQ-2" name="R-OP-LIQ-2"/><br>
+          <label for="VAR-NCG">Informe a variação da necessidade do capital de giro da empresa:</label>
+          <input type="number" required="required" id="VAR-NCG" /><br>
 
-          <input type="number" id="R-OP-LIQ-3" name="R-OP-LIQ-3"/><br>
+          <label for="depreciation">Informe a depreciação da empresa:</label>
+          <input type="number" required="required" id="depreciation"><br>
 
-          <input type="number" id="R-OP-LIQ-4" name="R-OP-LIQ-4"/><br>
-
-        </div><!--Receita-op-liq-->
-
-        <div class="nopat"></div><!--nopat-->
-
-        <div class="capex"></div><!--capex-->
-
-        <div class="var-ncg"></div><!--var-ncg-->
-
-        <div class="depreciation"></div><!--depreciation-->
-
-        <div class="fc-firma"></div><!--fc-firma-->
-
-        <div class="valor-presente-dos-fluxos"></div><!--valor-presente-dos-fluxos-->
-
-        <div class="valor-da-firma"></div><!--valor-da-firma-->
-
-        <div class="valor-do-acionista"></div><!--valor-do-acionista-->
-
-        <div class="valor-de-mercado"></div><!--valor-de-mercado-->
-
-        <div class="stock-price"></div><!--stock-price-->
-
-        <div class="stock-true-price"></div><!--stock-true-price-->
-
-        <div class="upside"></div><!--upside-->
-
-        </form><!--table-->
+          <label for="fc-firma">Informe o fluxo de caixa da firma:</label>
+          <input type="number" required="required" id="fc-firma"/>
+        </fieldset>
+        <button id="send-info">Calcular FCD</button>
+        
 
       </div><!--content-->
 
@@ -121,6 +95,11 @@
   </body>
 
 {% endblock content %}
+
+{% block modal %}
+  {%include "fcd-results.html"%}
+{% endblock modal %}
+
 
 {% block scripts %}
 
