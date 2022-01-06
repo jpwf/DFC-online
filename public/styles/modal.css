@@ -5,17 +5,20 @@
   width: 100%;
   /* margin-left:5%; */
 }
-#modal #results {
-  /* color: white; */
+/* #modal #results {
   /* /* font-weight: 700; */
-  display:flex; 
-}
+  /* display:flex;  */
+/* }  */
 
 /* #modal .header   { */
   /* display: flex;
   align-items: center;
   justify-content: space-between; */
 /* } */
+
+#results div{
+  display:inline-block;
+}
 
 #modal  button {
   display:flex;

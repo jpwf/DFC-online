@@ -7,3 +7,5 @@ sendresults.addEventListener("click", () => {
 backhome.addEventListener("click", () => {
   modal.classList.add("hide")
 })
+
+//JS para o modal a partir daqui
