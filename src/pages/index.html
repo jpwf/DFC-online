@@ -52,7 +52,7 @@
 
     <div class="price-result">
 
-      <input disabled placeholder="Price" id="price"/>
+      <input disabled="disabled" placeholder="Price" id="price"/>
 
     </div><!--price-result-->
 
@@ -60,12 +60,16 @@
 
     <div class="content">
       
-        <div class="metricas"></div><!--metricas-->
+        <div class="metricas">
+          <label for="perpet">Perpetuidade: </label>
+          <input id="perpet" value="1%" disabled="disabled"/>
+
+        </div><!--metricas-->
         <label for="debt">Informe a dívida da empresa:</label><br>
-        <input type="number" required="required" id="debt" name="debt"/><br>
+        <input type="number" required="required" id="debt"/><br>
 
         <label for="stocks-quantity">Informe o número de ações da empresa:</label><br>
-        <input type="number" required="required" id="stocks-quantity" name="stocks-quantity"/><br>
+        <input type="number" required="required" id="stocks-quantity"/><br>
         <fieldset>
           <label for="R-OP-LIQ">Informe a Receita operacional líquida da empresa:</label>
           <input type="number" required="required" id="R-OP-LIQ"/><br>
@@ -95,11 +99,6 @@
   </body>
 
 {% endblock content %}
-
-{% block modal %}
-  {%include "fcd-results.html"%}
-{% endblock modal %}
-
 
 {% block scripts %}
 

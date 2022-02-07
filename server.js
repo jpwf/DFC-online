@@ -12,9 +12,9 @@ nunjucks.configure("src/pages", {
 app.get("/", (req, res) =>{
   return res.render("index.html")
 })
-// app.get("/fcd-results", (req, res) => {
-//   return res.render("fcd-results.html")
-// })
+app.get("/fcd-results", (req, res) => {
+  return res.render("fcd-results.html")
+})
 
 const port = 2000
 app.listen(port, () => {
