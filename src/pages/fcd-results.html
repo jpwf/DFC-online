@@ -1,7 +1,7 @@
 <div class="hide" id="modal">
   <header>
     <h1>Resultados do FCD</h1>
-    <button id="close">Fechar</button>
+    <button id="home">Fechar</button>
   </header>
 
   <div id="results">
@@ -9,13 +9,13 @@
 
       <label for="R-OP-LIQ">Informe a Receita operacional líquida da empresa:</label>
 
-      <span type="number" id="R-OP-LIQ-1">.</span>
+      <p  id="R-OP-LIQ-1">.</p>
 
-      <span type="number" id="R-OP-LIQ-2"  placeholder="Ano 2" >.</span>
+      <p  id="R-OP-LIQ-2"  >.</p>
 
-      <span type="number" id="R-OP-LIQ-3"  placeholder="Ano 3" >.</span>
+      <p  id="R-OP-LIQ-3"  >.</p>
 
-      <span type="number" id="R-OP-LIQ-4"  placeholder="Perpetuidade" >.</span>
+      <p  id="R-OP-LIQ-4"  >.</p>
 
     </div><!--Receita-op-liq--><br>
 
@@ -115,6 +115,6 @@
 
 {% block scripts %}
 
-<script src="/scripts/modal.js"></script>
+<script src="/scripts/modal.js" type="module"></script>
 
 {% endblock scripts %}
