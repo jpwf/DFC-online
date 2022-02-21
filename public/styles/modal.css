@@ -1,8 +1,8 @@
 
-#modal{
+/* #modal{
   width: 100%;
   /* margin-left:5%; */
-}
+/* } */
 /* #modal #results {
   /* /* font-weight: 700; */
   /* display:flex;  */
@@ -14,15 +14,45 @@
   justify-content: space-between; */
 /* } */
 
-#results div{
+/* #results div{
   display:inline-block;
-}
+} */
 
-#modal  button {
+/* #modal  button {
   display:flex;
   color:white;
   font-size:120%;
   align-items: center;
   background-color:#0E0A14ef;
   border:0;
+} */
+
+
+
+
+#modal {
+  background-color: #0E0A14ef;
+
+  height: 100vh;
+  width: 100vw;
+
+  position:fixed;
+  top:0;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 400ms;
+}
+
+#modal.hide {
+  display:none;
+}
+
+#modal .content {
+  color: white;
+
+  width: 420px;
+
 }

@@ -1,4 +1,5 @@
 const sendresults = document.getElementById("send-info")
+const backhome = document.getElementById("home")
 
 const debt = document.getElementById("debt")
 const stocksquantity = document.getElementById("stocks-quantity")
@@ -13,7 +14,7 @@ const fcfirma = document.getElementById("fc-firma")
 
 sendresults.addEventListener("click", () => {
   if(debt.value !=0 & stocksquantity.value !=0 & ropliq.value !=0 & nopat.value != 0 & capex.value != 0 & varncg.value != 0 & depreciation.value != 0 & fcfirma.value != 0){
-    window.location = "/fcd-results"
+    modal.classList.remove("hide")
    
   }else{
     alert("Preencha todos os campos")
@@ -30,6 +31,9 @@ sendresults.addEventListener("click", () => {
   }
 })
 
+backhome.addEventListener("click",() => {
+  modal.classList.add("hide")
+})
 
 
 
