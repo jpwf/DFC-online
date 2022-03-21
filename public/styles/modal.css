@@ -1,8 +1,11 @@
-
-/* #modal{
+#modal.hide {
+  display:none;
+}
+#modal{
   width: 100%;
-  /* margin-left:5%; */
-/* } */
+  margin-left:5%;
+}
+/* }
 /* #modal #results {
   /* /* font-weight: 700; */
   /* display:flex;  */
@@ -30,7 +33,7 @@
 
 
 
-#modal {
+/* #modal {
   background-color: #0E0A14ef;
 
   height: 100vh;
@@ -44,15 +47,13 @@
   align-items: center;
 
   transition: 400ms;
-}
+} */
 
-#modal.hide {
-  display:none;
-}
 
-#modal .content {
+
+/* #modal .content {
   color: white;
 
   width: 420px;
 
-}
+} */
